@@ -1,0 +1,11 @@
+{
+    // Enable format on save
+    "editor.formatOnSave": true,
+    // Use Prettier as the default formatter
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // Enable ESLint to fix problems on save
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "always", // Runs both Prettier and ESLint on save
+        "source.fixAll.eslint": "always" // ESLint fix
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "common": {
+    "home": "Home"
+  },
+  "home": {
+    "title": "Home Page"
+  },
+  "dashboard": {
+    "title": "Dashboard"
+  },
+  "login": {
+    "title": "Login"
+  }
+}
