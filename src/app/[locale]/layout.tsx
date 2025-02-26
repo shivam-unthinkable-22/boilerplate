@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { Roboto } from "next/font/google";
 import { META } from "@/constants/meta";
 import theme from "@/theme";
+import StoreProvider from "@/components/StoreProvider";
 
 const roboto = Roboto({
   weight: "400",
@@ -44,9 +45,11 @@ export default async function LocaleLayout({
     <html lang={localeConfig[locale] || locale} className={roboto.className}>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <AppRouterCacheProvider>
-            <ThemeProvider theme={theme}>{children}</ThemeProvider>
-          </AppRouterCacheProvider>
+          <StoreProvider>
+            <AppRouterCacheProvider>
+              <ThemeProvider theme={theme}>{children}</ThemeProvider>
+            </AppRouterCacheProvider>
+          </StoreProvider>
         </NextIntlClientProvider>
       </body>
     </html>
